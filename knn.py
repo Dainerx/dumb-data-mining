@@ -5,7 +5,8 @@ from sklearn.metrics import accuracy_score
 
 def knn_predict(XTrain,YTrain, XPredict, K = 1):
     neigh = KNeighborsClassifier(n_neighbors=K)
-    neigh.fit(XTrain, YTrain)
+    neigh.fit(Xtraining, test = x[:80,:], x[80:,:]
+Train, YTrain)
     Ypredict = neigh.predict(XPredict)
     return Ypredict
 
