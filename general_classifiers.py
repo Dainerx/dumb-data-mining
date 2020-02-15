@@ -36,3 +36,7 @@ print(mean_squared_error(naivebayes(XTrain, YTrain,XTest),YTest))
 print(mean_squared_error(decisiontree(XTrain, YTrain,XTest),YTest))
 #svm error
 print(mean_squared_error(svm(XTrain, YTrain,XTest),YTest))
+
+# further analysis:
+print(metrics.classification_report(YTest, YTrain))
+print(metrics.confusion_matrix(YTest, YTrain))
